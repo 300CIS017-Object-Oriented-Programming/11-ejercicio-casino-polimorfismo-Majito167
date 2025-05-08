@@ -62,6 +62,7 @@ int View::mostrarMenu() {
     cout << "3. Consultar jugador  " << std::endl;
     cout << "4. Recargar gonzos " << std::endl;
     cout << "5. Retirar jugador casino " << std::endl;
+    cout << "6. Ver reglas de los juegos" << std::endl;
     cout << "0. Salir\n"
          << std::endl;
     cout << "Digita el numero: ";
@@ -89,6 +90,9 @@ void View::verPrincipal() {
             case 5:
                 retirarJugador();
                 break;
+            case 6:
+                verReglas();
+            break;
             case 0:
                 cout << "Hasta pronto !";
                 break;
@@ -135,4 +139,23 @@ void View::recargarGonzos() {
         // Se muestra un error si el usuario no existe
         cout << ex.what();
     }
+}
+void View::verReglas() {
+    cout << "\n--- Reglas de los juegos ---\n";
+    cout << "1. Mayor a 13:\n";
+    cout << "- Se lanza un dado. Si el numero es mayor a 13, ganas el doble de lo apostado.\n";
+    cout << "- Si es menor o igual, pierdes lo apostado.\n\n";
+
+    cout << "2. Dos colores:\n";
+    cout << "- Apuestas a un color (blanco o negro).\n";
+    cout << "- Si aciertas el color ganas lo apostado.\n";
+    cout << "- Si aciertas el número y el color, ganas 4 veces lo apostado.\n";
+    cout << "- Si solo aciertas el numero, ganas 1.5 veces lo apostado.\n";
+    cout << "- Si no aciertas nada, pierdes lo apostado.\n\n";
+
+    cout << "3. Slots:\n";
+    cout << "- El juego muestra 3 simbolos aleatorios.\n";
+    cout << "- Si los tres coinciden ganas 5 veces lo apostado.\n";
+    cout << "- Si dos coinciden, ganas 2 veces lo apostado.\n";
+    cout << "- Si no coinciden, pierdes lo apostado.\n\n";
 }
