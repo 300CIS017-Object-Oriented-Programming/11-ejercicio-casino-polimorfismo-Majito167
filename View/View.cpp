@@ -12,7 +12,7 @@ void View::agregarJugador() {
     } catch (std::invalid_argument &ex) {
         // Controla la aparecion de errores.
         // what es el metodo que muestra el mensaje de error de las excepciones
-        cout << "ERROR con parámetros: " << ex.what();
+        cout << "ERROR con parametros: " << ex.what();
     } catch (std::exception &ex) {
         cout << "ERROR contactate al adminstrador " << ex.what();
     }
@@ -37,14 +37,15 @@ void View::jugarView() {
         cout << "1. Mayor a 13." << endl;
         cout << "2. Dos colores." << endl;
         cout << "3. Slots" << endl;
+        cout << "4. Par o Impar\n";
         cout << "Opcion: ";
         cin >> idJuego;
         std::string textoResultado;
         gonzosResultado = casino.jugar(idJuego, idJugador, cantGonzos);
         if (gonzosResultado > 0) {
-            textoResultado = "Haz ganado!: ";
+            textoResultado = "Haz ganado ";
         } else {
-            textoResultado = "Haz perdido :(!: ";
+            textoResultado = "Haz perdido ";
         }
         cout << textoResultado << gonzosResultado << " Gonzos" << endl;
 
@@ -91,7 +92,7 @@ void View::verPrincipal() {
                 retirarJugador();
                 break;
             case 6:
-                verReglas();
+                mostrarReglas();
             break;
             case 0:
                 cout << "Hasta pronto !";
@@ -140,7 +141,7 @@ void View::recargarGonzos() {
         cout << ex.what();
     }
 }
-void View::verReglas() {
+void View::mostrarReglas() {
     cout << "\n--- Reglas de los juegos ---\n";
     cout << "1. Mayor a 13:\n";
     cout << "- Se lanza un dado. Si el numero es mayor a 13, ganas el doble de lo apostado.\n";
@@ -149,7 +150,7 @@ void View::verReglas() {
     cout << "2. Dos colores:\n";
     cout << "- Apuestas a un color (blanco o negro).\n";
     cout << "- Si aciertas el color ganas lo apostado.\n";
-    cout << "- Si aciertas el número y el color, ganas 4 veces lo apostado.\n";
+    cout << "- Si aciertas el numero y el color, ganas 4 veces lo apostado.\n";
     cout << "- Si solo aciertas el numero, ganas 1.5 veces lo apostado.\n";
     cout << "- Si no aciertas nada, pierdes lo apostado.\n\n";
 
@@ -158,4 +159,11 @@ void View::verReglas() {
     cout << "- Si los tres coinciden ganas 5 veces lo apostado.\n";
     cout << "- Si dos coinciden, ganas 2 veces lo apostado.\n";
     cout << "- Si no coinciden, pierdes lo apostado.\n\n";
+
+    cout << "4. Par o Impar:\n";
+    cout << "  Eliges 'par' o 'impar'.\n";
+    cout << "  Se genera un numero entre 1 y 10.\n";
+    cout << "  Si aciertas la paridad, ganas el doble.\n";
+    cout << "  Si no, pierdes lo apostado.\n\n";
+
 }

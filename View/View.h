@@ -26,7 +26,7 @@ private:
 
     void recargarGonzos();
 
-    void verReglas();
+    void mostrarReglas();
 
 
 public:

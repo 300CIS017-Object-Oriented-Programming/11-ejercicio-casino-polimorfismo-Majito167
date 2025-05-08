@@ -44,3 +44,8 @@ float Mayor13::calcularResultado(float gonzosApostar) {
         return lowestResult;
     }
 }
+void Mayor13::mostrarReglas() {
+    cout << "1. Mayor a 13:\n";
+    cout << "- Se lanza un dado. Si el numero es mayor a 13, ganas el doble de lo apostado.\n";
+    cout << "- Si es menor o igual, pierdes lo apostado.\n\n";
+}
