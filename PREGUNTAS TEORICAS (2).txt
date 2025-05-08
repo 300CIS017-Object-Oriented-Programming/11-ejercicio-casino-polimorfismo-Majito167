@@ -1,0 +1,13 @@
+📈 PREGUNTAS TEÓRICAS - 15 puntos
+Conteste las preguntas en un archivo llamado su código.md. Suba este archivo a su repositorio
+
+CLASES ABSTRACTAS (6 pts) La clase Juego es una clase abstracta.
+Explique qué cosas del código fuente indican que la clase es una clase abstracta
+
+Una clase se considera abstracta cuando contiene al menos una función virtual pura 
+por ejemplo: virtual float jugar(Jugador* jugador, int apuesta) = 0;
+
+En la clase Juego, esta línea indica que es abstracta, ya que el = 0 al final define el método como virtual puro. Esto obliga a que todas las clases hijas implementen ese método, y como consecuencia, no se pueden crear instancias directas de la clase abstracta
+
+¿Qué implicaciones tiene esa decisión de diseño para este programa?. Explique
+El uso de clases abstractas en el código permite aprovechar el polimorfismo, lo que brinda coherencia entre las clases. Las clases hijas heredan una interfaz común, lo que facilita la implementación de distintas lógicas para cada juego, sin afectar la estructura general del casino ni la gestión de los jugadores, que se mantiene independiente

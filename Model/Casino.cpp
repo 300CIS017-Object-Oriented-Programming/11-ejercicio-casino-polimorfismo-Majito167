@@ -8,7 +8,7 @@
 Casino::Casino() {
     cout << "Inicialice casino";
     // Inicia un jugador en el mapa para comenzar
-    jugadoresMap.insert({1, new Jugador(1, "Pedro rodriguez", 500)});
+    jugadoresMap.insert({1, new Jugador(1, "Pedro rodriguez", 500000)});
 
     // Inicia  los juegos disponibles y los agrega al mapa de juegos
     // Se puede usar auto pq el tipo de objeto que voy a crear es igual a la variable que estoy inicializando ejm Mayor13
@@ -18,6 +18,9 @@ Casino::Casino() {
     juegosDisponibles.push_back(juego2);
     auto *slots = new Slots();
     juegosDisponibles.push_back(slots);
+    auto *juegoParImpar = new ParImpar();
+    juegosDisponibles.push_back(juegoParImpar);
+
 }
 
 void Casino::agregarJugador() {

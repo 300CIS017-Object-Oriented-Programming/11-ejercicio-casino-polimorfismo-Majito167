@@ -6,7 +6,7 @@ float Slots::jugar(float gonzosApostar) {
     int numMaxRandom = 7;
     int numMinRandom = 1;
 
-    cout << "Calculará tres numeros aleatorios del 1 al 6: \n";
+    cout << "Calculara tres numeros aleatorios del 1 al 6: \n";
     // para calcular numero aleatorio variable = limite_inferior + rand() % (limite_superior +1 - limite_inferior) ;
     slot1 = numMinRandom + rand() % numMaxRandom;// numeros de 1 a 7
     slot2 = numMinRandom + rand() % numMaxRandom;// numeros de 1 a 7
@@ -31,4 +31,10 @@ float Slots::calcularResultado(float gonzosApostar) {
     } else {
         return 0;
     }
+}
+void Slots::mostrarReglas() {
+    cout << "- El juego muestra 3 simbolos aleatorios.\n";
+    cout << "- Si los tres coinciden ganas 5 veces lo apostado.\n";
+    cout << "- Si dos coinciden, ganas 2 veces lo apostado.\n";
+    cout << "- Si no coinciden, pierdes lo apostado.\n\n";
 }

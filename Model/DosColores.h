@@ -22,6 +22,7 @@ public:
     float jugar(float gonzosApostar) override;
 
     ~DosColores() override = default; // Hace que se defina un constuctor por defecto
+    void mostrarReglas() override;
 
 };
 

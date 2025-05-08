@@ -57,3 +57,10 @@ DosColores::~DosColores() {
 
 }
 */
+void DosColores::mostrarReglas() {
+    cout << "- Apuestas a un color (blanco o negro).\n";
+    cout << "- Si aciertas el color ganas lo apostado.\n";
+    cout << "- Si aciertas el número y el color, ganas 4 veces lo apostado.\n";
+    cout << "- Si solo aciertas el numero, ganas 1.5 veces lo apostado.\n";
+    cout << "- Si no aciertas nada, pierdes lo apostado.\n\n";
+}

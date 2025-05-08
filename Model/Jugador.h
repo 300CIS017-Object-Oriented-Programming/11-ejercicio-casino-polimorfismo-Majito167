@@ -19,6 +19,7 @@ private: //atributos
     long id{};
     float cantGonzos{};
     int cantJuegos;
+    int gonzos;
 
 public:
     Jugador();
@@ -36,6 +37,9 @@ public:
     const string &getNombre() const;
 
     float getCantGonzos() const;
+
+    int getGonzos() const { return gonzos; }
+    void setGonzos(int nuevosGonzos) { gonzos = nuevosGonzos; }
 };
 
 #endif //CASINO_JUGADOR_H
